@@ -35,9 +35,9 @@ fn main() -> io::Result<()> {
     let args = Args::parse();
 
     if args.encrypt {
-        cipher_file::encrypt_file(&args.input, &args.output, &args.password)?;
+        file_encryptor::encrypt_file(&args.input, &args.output, &args.password)?;
     } else if args.decrypt {
-        cipher_file::decrypt_file(&args.input, &args.output, &args.password)?;
+        file_encryptor::decrypt_file(&args.input, &args.output, &args.password)?;
     }
 
     Ok(())

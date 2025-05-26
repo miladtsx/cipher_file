@@ -2,7 +2,7 @@ use std::fs::{self, File};
 use std::io::Write;
 use std::path::PathBuf;
 
-use cipher_file::{decrypt_file, encrypt_file};
+use file_encryptor::{decrypt_file, encrypt_file};
 
 fn temp_file(name: &str) -> PathBuf {
     let path = std::env::temp_dir().join(name);

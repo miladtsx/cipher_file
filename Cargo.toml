@@ -1,19 +1,27 @@
 [package]
-name = "cipher_file"
+name = "file_encryptor"
 version = "0.1.0"
 edition = "2024"
+authors = ["Milad <miladtsx@gmail.com>"]
+license = "MIT"
+description = "A simple libsodium-based file encryption/decryption CLI"
+repository = "https://github.com/miladtsx/cipher_file"
+readme = "README.md"
+keywords = ["cli", "encryption", "sodiumoxide", "crypto"]
+categories = ["command-line-utilities", "cryptography"]
+
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
 sodiumoxide = "0.2.7"
 
 [lib]
-name = "cipher_file"
+name = "file_encryptor"
 path = "src/lib.rs"
 
 
 [[bin]]
-name = "cipher_file_cli"
+name = "file_encryptor"
 path = "src/main.rs"
 
 
