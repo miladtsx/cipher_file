@@ -14,11 +14,6 @@ jobs:
       - name: 📥 Checkout
         uses: actions/checkout@v4
 
-      - name: 🦀 Setup Rust
-        uses: actions/setup-rust@v1
-        with:
-          rust-version: stable
-
       - name: 🛠️ Build
         run: cargo build --release --verbose
 
