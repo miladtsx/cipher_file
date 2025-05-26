@@ -56,15 +56,5 @@ Options:
 
 > Never share your password. If you lose it, your data cannot be recovered.
 
-### 🧪 Running Tests
-```bash
-cargo test
-```
-
-### For coverage (requires cargo-tarpaulin):
-```bash
-cargo tarpaulin --tests
-```
-
 ## 📜 License
 MIT © 2025 Milad

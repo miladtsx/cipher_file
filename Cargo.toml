@@ -1,12 +1,12 @@
 [package]
 name = "file_encryptor"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Milad <miladtsx@gmail.com>"]
 license = "MIT"
 description = "A simple libsodium-based file encryption/decryption CLI"
 repository = "https://github.com/miladtsx/cipher_file"
-readme = "README.md"
+readme = "README_crates.md"
 keywords = ["cli", "encryption", "sodiumoxide", "crypto"]
 categories = ["command-line-utilities", "cryptography"]
 
