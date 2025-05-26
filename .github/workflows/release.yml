@@ -17,5 +17,15 @@ jobs:
       - name: 🛠️ Build
         run: cargo build --release --verbose
 
+      - name: 📦 Publish dry-run (safety check)
+        run: cargo publish --dry-run
+
       - name: 📦 Publish to crates.io
         run: cargo publish --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
+
+      - name: 📝 Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "Release ${{ github.ref_name }}"
+          generate_release_notes: true
