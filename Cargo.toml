@@ -15,3 +15,9 @@ path = "src/lib.rs"
 [[bin]]
 name = "cipher_file_cli"
 path = "src/main.rs"
+
+
+[package.metadata.tarpaulin]
+run_types = ["Tests"]
+line_coverage = true
+branch_coverage = true

@@ -1,6 +1,17 @@
 use sodiumoxide::crypto::{pwhash, secretbox};
 use std::{fs, io};
 
+/// Encrypts the contents of a file using a password-based key.
+///
+/// # Arguments
+///
+/// * `input` - The path to the input file that will be encrypted.
+/// * `output` - The path where the encrypted file will be written.
+/// * `password` - The password used to derive the encryption key.
+///
+/// # Errors
+///
+/// Returns an error if file reading, writing, or encryption fails.
 pub fn encrypt_file(input: &str, output: &str, password: &str) -> io::Result<()> {
     let data = fs::read(input)?;
     let password = password.as_bytes();
@@ -28,6 +39,17 @@ pub fn encrypt_file(input: &str, output: &str, password: &str) -> io::Result<()>
     Ok(())
 }
 
+/// Decrypts the contents of an encrypted file using a password-based key.
+///
+/// # Arguments
+///
+/// * `input` - The path to the encrypted input file.
+/// * `output` - The path where the decrypted file will be written.
+/// * `password` - The password used to derive the decryption key.
+///
+/// # Errors
+///
+/// Returns an error if the file cannot be read, the decryption fails, or the password is incorrect.
 pub fn decrypt_file(input: &str, output: &str, password: &str) -> io::Result<()> {
     let data = fs::read(input)?;
     if data.len() < pwhash::SALTBYTES + secretbox::NONCEBYTES {
