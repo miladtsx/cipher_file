@@ -8,6 +8,7 @@ on:
 jobs:
   publish:
     name: 📦 Publish to crates.io
+    needs: build-test
     runs-on: ubuntu-latest
 
     steps:
