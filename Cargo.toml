@@ -1,0 +1,17 @@
+[package]
+name = "cipher_file"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+sodiumoxide = "0.2.7"
+
+[lib]
+name = "cipher_file"
+path = "src/lib.rs"
+
+
+[[bin]]
+name = "cipher_file_cli"
+path = "src/main.rs"
